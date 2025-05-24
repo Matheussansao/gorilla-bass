@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gorilla vs 100 humanos</title>
+
+</head>
+<body>
+    <div class="container">
+
+        <h1>🦍 Gorilla vs 100 Humanos</h1>
+
+        <div class="barra-status">
+            <p>Vida do Gorilla: <span id="vidaGorilla">100</span></p>
+            <p>Humanos restantes: <span id="humanosRestantes">100</span></p>
+            <p>Ataques feitos: <span id="ataques">0</span></p>
+        </div>
+
+        <div class="batalha">
+            <img src="./assets/gorilla.png" alt="Gorilla" class="gorilla"/>
+            <div id="humanos" class="humanos"></div>
+        </div>
+
+        <div class="botoes">
+            <button onclick="iniciarJogo()">Iniciar</button>
+            <button onclick="atacar()">Atacar</button>
+            <button onclick="defender()">Defender</button>
+            <button onclick="curar()">Curar</button>
+            <button onclick="reiniciar()">Reiniciar</button>
+        </div>
+
+        <div id="log" class="log"></div>
+
+    </div>
+</body>
+</html>
