@@ -27,3 +27,11 @@ h1 {
     font-size: 28px;
     margin-bottom: 20px;
 }
+
+.barra-status{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 16px;
+}
