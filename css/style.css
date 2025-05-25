@@ -44,3 +44,7 @@ h1 {
     color: #000;
     transition: background 0.2s ease;
 }
+
+.botoes button:hover{
+    background: #d0d0d0;
+}
