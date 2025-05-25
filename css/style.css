@@ -32,3 +32,15 @@ h1 {
     text-align: center;
     margin-top: 16px;
 }
+
+.botoes button {
+    margin: 6px;
+    padding: 10px 20px;
+    font-weight: 500;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #e0e0e0;
+    color: #000;
+    transition: background 0.2s ease;
+}
