@@ -85,3 +85,13 @@ function reiniciar() {
 function salvar() {
   localStorage.setItem("gorilla", JSON.stringify({ vidaGorilla, humanos, ataques, defendendo }));
 }
+
+function carregar() {
+  const dados = JSON.parse(localStorage.getItem("gorilla"));
+  if (dados) {
+    vidaGorilla = dados.vidaGorilla;
+    humanos = dados.humanos;
+    ataques = dados.ataques;
+    defendendo = dados.defendendo;
+  }
+}
