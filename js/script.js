@@ -81,3 +81,7 @@ function reiniciar() {
   atualizarInterface();
   salvar();
 }
+
+function salvar() {
+  localStorage.setItem("gorilla", JSON.stringify({ vidaGorilla, humanos, ataques, defendendo }));
+}
