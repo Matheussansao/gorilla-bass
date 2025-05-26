@@ -95,3 +95,8 @@ function carregar() {
     defendendo = dados.defendendo;
   }
 }
+
+function verificarFimDeJogo() {
+  if (vidaGorilla <= 0) log("Gorilla foi derrotado!");
+  if (humanos.filter(h => h.vivo).length === 0) log("Todos os humanos foram eliminados!");
+}
