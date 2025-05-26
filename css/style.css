@@ -57,6 +57,13 @@ h1 {
     gap: 4px;
 }
 
+.humano {
+    width: 24px;
+    height: 24px;
+    background-image: url('../assets/humano.png');
+    background-size: cover;
+}
+
 .botoes {
     text-align: center;
     margin-top: 16px;
