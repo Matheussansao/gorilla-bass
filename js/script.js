@@ -34,3 +34,20 @@ function iniciarJogo() {
     log("Jogo iniciado!");
   }
 }
+
+function atacar() {
+  if (humanos.filter(h => h.vivo).length === 0 || vidaGorilla <= 0) return;
+
+  const somAtaque = new Audio('../assets/audio/som-ataque.mp3'); 
+  somAtaque.volume = 0.7;
+  somAtaque.play();
+
+  const vivos = humanos.filter(h => h.vivo);
+  const quantidade = Math.min(vivos.length, Math.floor(Math.random() * 6) + 1);
+  for (let i = 0; i < quantidade; i++) vivos[i].vivo = false;
+  ataques++;
+  log(`Gorilla atacou e derrotou ${quantidade} humano(s).`);
+  atualizarInterface();
+  salvar();
+  verificarFimDeJogo();
+}
