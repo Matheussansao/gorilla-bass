@@ -100,3 +100,22 @@ function verificarFimDeJogo() {
   if (vidaGorilla <= 0) log("Gorilla foi derrotado!");
   if (humanos.filter(h => h.vivo).length === 0) log("Todos os humanos foram eliminados!");
 }
+carregar();
+atualizarInterface();
+
+function ataqueAutomaticoHumano() {
+  if (vidaGorilla > 0 && humanos.filter(h => h.vivo).length > 0) {
+    const dano = Math.floor(Math.random() * 10) + 15; 
+    if (!defendendo) {
+      vidaGorilla -= dano;
+      if (vidaGorilla < 0) vidaGorilla = 0;
+      log(`💥 Humanos atacaram! Gorilla perdeu ${dano} de vida!`);
+    } else {
+      log("🛡️ Humanos atacaram, mas o gorilla se defendeu!");
+      defendendo = false;
+    }
+    atualizarInterface();
+    salvar();
+    verificarFimDeJogo();
+  }
+}
