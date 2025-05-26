@@ -27,3 +27,10 @@ function log(msg) {
   logDiv.innerHTML += `<p>${msg}</p>`;
   logDiv.scrollTop = logDiv.scrollHeight;
 }
+
+function iniciarJogo() {
+  if (!intervaloAtaque) {
+    intervaloAtaque = setInterval(ataqueAutomaticoHumano, 800);
+    log("Jogo iniciado!");
+  }
+}
