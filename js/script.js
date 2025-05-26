@@ -51,3 +51,9 @@ function atacar() {
   salvar();
   verificarFimDeJogo();
 }
+
+function defender() {
+  defendendo = true;
+  log("Gorilla está se defendendo no próximo turno.");
+  salvar();
+}
