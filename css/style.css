@@ -44,6 +44,10 @@ h1 {
     margin: 20px 0;
 }
 
+.gorilla {
+    width: 150px;
+    height: auto;
+}
 
 .botoes {
     text-align: center;
