@@ -69,3 +69,15 @@ function curar() {
   atualizarInterface();
   salvar();
 }
+
+function reiniciar() {
+  vidaGorilla = 100;
+  humanos = Array.from({ length: 100 }, (_, i) => ({ id: i, vivo: true }));
+  ataques = 0;
+  defendendo = false;
+  logDiv.innerHTML = "";
+  clearInterval(intervaloAtaque);
+  intervaloAtaque = null;
+  atualizarInterface();
+  salvar();
+}
