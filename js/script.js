@@ -22,3 +22,8 @@ function atualizarInterface() {
     humanosDiv.appendChild(div);
   });
 }
+
+function log(msg) {
+  logDiv.innerHTML += `<p>${msg}</p>`;
+  logDiv.scrollTop = logDiv.scrollHeight;
+}
