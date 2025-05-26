@@ -57,3 +57,15 @@ function defender() {
   log("Gorilla está se defendendo no próximo turno.");
   salvar();
 }
+
+function curar() {
+  if (vidaGorilla <= 0) {
+    log("⚠️ O gorilla está morto e não pode se curar.");
+    return;
+  }
+  const cura = Math.floor(Math.random() * 11) + 10;
+  vidaGorilla = Math.min(vidaGorilla + cura, 100);
+  log(`🧪 Gorilla se curou em ${cura} pontos.`);
+  atualizarInterface();
+  salvar();
+}
