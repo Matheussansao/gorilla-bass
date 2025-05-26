@@ -64,6 +64,11 @@ h1 {
     background-size: cover;
 }
 
+.humano.morto {
+    opacity: 0.3;
+    filter: grayscale(100%);
+}
+
 .botoes {
     text-align: center;
     margin-top: 16px;
