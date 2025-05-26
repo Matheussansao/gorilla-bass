@@ -9,3 +9,16 @@ const humanosSpan = document.getElementById("humanosRestantes");
 const ataquesSpan = document.getElementById("ataques");
 const humanosDiv = document.getElementById("humanos");
 const logDiv = document.getElementById("log");
+
+function atualizarInterface() {
+  vidaSpan.textContent = vidaGorilla;
+  humanosSpan.textContent = humanos.filter(h => h.vivo).length;
+  ataquesSpan.textContent = ataques;
+  humanosDiv.innerHTML = "";
+  humanos.forEach(h => {
+    const div = document.createElement("div");
+    div.classList.add("humano");
+    if (!h.vivo) div.classList.add("morto");
+    humanosDiv.appendChild(div);
+  });
+}
